@@ -18,5 +18,5 @@ Este repositorio contiene mis prácticas, ejercicios, pruebas técnicas y recurs
 
 ## Recursos útiles
 
-- [Documentación oficial de React](https://reactjs.org/docs/getting-started.html)
+- [Documentación oficial de React](https://es.react.dev/)
 - [React Cheatsheet](https://devhints.io/react)
