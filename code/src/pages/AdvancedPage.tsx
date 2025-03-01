@@ -1,16 +1,13 @@
-import { Link } from 'wouter';
-import { ReturnBtn } from '../buttons/ReturnBtn';
+import { ReturnBtn } from '../components/buttons/ReturnBtn';
+import { ItemsList } from '../components/ItemsList';
+import { AdvancedList } from '../data/list';
 
 export const AdvancedPage = () => {
   return (
     <main>
-      <ul>
-        <li>
-          <Link to='/advanced/usetransition'>useTransition</Link>
-        </li>
-      </ul>
+      <ItemsList type='advanced' list={AdvancedList} />
 
-      <div className='mt-4'>
+      <div className='mt-10'>
         <ReturnBtn />
       </div>
     </main>

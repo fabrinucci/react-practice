@@ -1,14 +1,13 @@
-import { ReturnBtn } from '../buttons/ReturnBtn';
+import { ReturnBtn } from '../components/buttons/ReturnBtn';
+import { ItemsList } from '../components/ItemsList';
+import { IntermediateList } from '../data/list';
 
 export const IntermediatePage = () => {
   return (
     <main>
-      <ul>
-        <li>he</li>
-        <li>he</li>
-        <li>he</li>
-      </ul>
-      <div className='mt-4'>
+      <ItemsList type='intermediate' list={IntermediateList} />
+
+      <div className='mt-10'>
         <ReturnBtn />
       </div>
     </main>

@@ -1,5 +1,5 @@
 import { ChangeEvent, useState, useTransition } from 'react';
-import { ReturnBtn } from '../../buttons/ReturnBtn';
+import { ReturnBtn } from '../../components/buttons/ReturnBtn';
 
 const items = [
   'Laptop',
@@ -14,8 +14,10 @@ const items = [
 export const UseTransition = () => {
   return (
     <div>
-      <ReturnBtn />
       <SearchList items={items} />
+      <div className='mt-10'>
+        <ReturnBtn />
+      </div>
     </div>
   );
 };

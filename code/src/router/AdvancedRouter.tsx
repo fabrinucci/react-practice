@@ -1,6 +1,6 @@
 import { Route } from 'wouter';
-import { AdvancedPage } from '../pages/AdvancedPage';
-import { UseTransition } from '../pages/avanzado/UseTransition';
+import { AdvancedPage } from '../pages/';
+import { UseTransition } from '../pages/advanced';
 
 export const AdvancedRouter = () => {
   return (
