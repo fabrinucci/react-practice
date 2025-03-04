@@ -3,6 +3,12 @@ export const IntermediateList = [
   'event-suscribe',
   'cancel-request',
   'clean-useEffect',
+  'hocs',
+  'render-props',
+  'controlled-element',
+  'uncontrolled-element',
+  'useMemo',
+  'useCallback',
 ];
 
 export const AdvancedList = ['useTransition'];

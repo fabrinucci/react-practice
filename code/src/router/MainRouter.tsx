@@ -9,7 +9,16 @@ import {
   EventSuscribe,
 } from '../pages/intermediate/useEffect';
 
+import {
+  ControlledComponent,
+  HOC,
+  RenderProps,
+  UncontrolledComponent,
+} from '../pages/intermediate';
+
 import { UseTransition } from '../pages/advanced';
+import { UseMemo } from '../pages/intermediate/UseMemo';
+import { UseCallback } from '../pages/intermediate/UseCallback';
 
 export const MainRouter = () => {
   return (
@@ -26,6 +35,12 @@ export const MainRouter = () => {
       <Route path='/intermediate/event-suscribe' component={EventSuscribe} />
       <Route path='/intermediate/cancel-request' component={CancelRequest} />
       <Route path='/intermediate/clean-useEffect' component={CleanUseEffect} />
+      <Route path='/intermediate/hocs' component={HOC} />
+      <Route path='/intermediate/render-props' component={RenderProps} />
+      <Route path='/intermediate/controlled-element' component={ControlledComponent} />
+      <Route path='/intermediate/uncontrolled-element' component={UncontrolledComponent} />
+      <Route path='/intermediate/useMemo' component={UseMemo} />
+      <Route path='/intermediate/useCallback' component={UseCallback} />
 
       {/* Advanced */}
       <Route path='/advanced' component={AdvancedPage} />
