@@ -14,7 +14,7 @@ const items = [
 
 export const UseTransition = () => {
   return (
-    <HeaderLayout title='Hook useCallback' path='advanced'>
+    <HeaderLayout title='Hook useTransition' path='advanced'>
       <SearchList items={items} />
       <div className='mt-10'>
         <ReturnBtn />
