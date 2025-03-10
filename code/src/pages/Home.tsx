@@ -2,15 +2,15 @@ import { Link } from 'wouter';
 
 const pages = [
   {
-    name: 'Basic',
+    name: 'Básico',
     path: '/basic',
   },
   {
-    name: 'Intermediate',
+    name: 'Intermedio',
     path: '/intermediate',
   },
   {
-    name: 'Advanced',
+    name: 'Avanzado',
     path: '/advanced',
   },
 ];

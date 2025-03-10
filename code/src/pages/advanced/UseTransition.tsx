@@ -1,5 +1,6 @@
 import { ChangeEvent, useState, useTransition } from 'react';
 import { ReturnBtn } from '../../components/buttons/ReturnBtn';
+import { HeaderLayout } from '../../layouts';
 
 const items = [
   'Laptop',
@@ -13,12 +14,12 @@ const items = [
 
 export const UseTransition = () => {
   return (
-    <div>
+    <HeaderLayout title='Hook useCallback' path='advanced'>
       <SearchList items={items} />
       <div className='mt-10'>
         <ReturnBtn />
       </div>
-    </div>
+    </HeaderLayout>
   );
 };
 
@@ -32,16 +33,14 @@ function SearchList({ items }: { items: string[] }) {
     setQuery(value);
 
     startTransition(() => {
-      setFilteredItems(
-        items.filter((item) => item.toLowerCase().includes(value.toLowerCase()))
-      );
+      setFilteredItems(items.filter((item) => item.toLowerCase().includes(value.toLowerCase())));
     });
   };
 
   return (
     <div>
       <input
-        className='bg-amber-50 text-blue-800 placeholder:text-blue-600 font-bold outline-none p-2 mb-2 rounded-xl'
+        className='w-full bg-amber-50 text-blue-800 placeholder:text-blue-600 font-bold outline-none p-2 mb-2 rounded-xl'
         type='text'
         value={query}
         onChange={handleSearch}

@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { HeaderLayout } from '../../../layouts';
 
 export const BasicUseEffect = () => {
   useEffect(() => {
@@ -9,5 +10,9 @@ export const BasicUseEffect = () => {
     };
   }, []);
 
-  return <div>Montado y desmontado de componentes</div>;
+  return (
+    <HeaderLayout title='Uso básico de useEffect' path='intermediate'>
+      <p>Montado y desmontado de componentes</p>
+    </HeaderLayout>
+  );
 };

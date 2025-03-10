@@ -1,12 +1,12 @@
 import React, { useCallback, useState } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 export const UseCallback = () => {
   return (
-    <div className='max-w-sm mx-auto'>
-      <h1 className='font-bold text-2xl text-center text-blue-200 mb-6'>Hook useCallback</h1>
+    <HeaderLayout title='Hook useCallback' path='intermediate'>
       <CounterWithoutCallback />
       <CounterCallback />
-    </div>
+    </HeaderLayout>
   );
 };
 

@@ -1,12 +1,12 @@
 import { useMemo, useState } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 export const UseMemo = () => {
   return (
-    <div className='max-w-sm mx-auto'>
-      <h1 className='font-bold text-2xl text-center text-blue-200 mb-6'>Hook UseMemo</h1>
+    <HeaderLayout title='Hook useMemo' path='intermediate'>
       <CounterWithoutMemo />
       <CounterMemo />
-    </div>
+    </HeaderLayout>
   );
 };
 

@@ -1,4 +1,5 @@
 import { ComponentType, FC } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 interface WithLoadingProps {
   isLoading: boolean;
@@ -20,9 +21,11 @@ const MyComponentWithLoading = withLoading(MyComponent);
 
 export function HOC() {
   return (
-    <div>
-      <MyComponentWithLoading isLoading={true} message='Hola, mundo' />
-      <MyComponentWithLoading isLoading={false} message='Hola, mundo' />
-    </div>
+    <HeaderLayout title='High Order Components' path='intermediate'>
+      <div>
+        <MyComponentWithLoading isLoading={true} message='Hola, mundo' />
+        <MyComponentWithLoading isLoading={false} message='Hola, mundo' />
+      </div>
+    </HeaderLayout>
   );
 }

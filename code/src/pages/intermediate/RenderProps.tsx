@@ -1,4 +1,5 @@
 import { ReactNode } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 type RenderProps = {
   render: (data: Data) => ReactNode;
@@ -10,7 +11,12 @@ type Data = {
 
 function DataProvider({ render }: RenderProps) {
   const data = { target: 'render prop' };
-  return render(data);
+
+  return (
+    <HeaderLayout title='Render Props' path='intermediate'>
+      {render(data)}
+    </HeaderLayout>
+  );
 }
 
 export const RenderProps = () => {

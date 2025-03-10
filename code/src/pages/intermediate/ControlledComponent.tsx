@@ -1,4 +1,5 @@
 import { type ChangeEvent, useState } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 export const ControlledComponent = () => {
   const [value, setValue] = useState('');
@@ -8,8 +9,7 @@ export const ControlledComponent = () => {
   };
 
   return (
-    <div className='max-w-sm mx-auto'>
-      <h1 className='font-bold text-2xl text-center text-blue-200 mb-6'>Formulario Controlado</h1>
+    <HeaderLayout title='Formulario Controlado' path='intermediate'>
       <div className='mb-4'>
         <label className='block mb-2 text-sm font-medium text-blue-100'>Ingresa el input</label>
         <input
@@ -21,6 +21,6 @@ export const ControlledComponent = () => {
         />
       </div>
       <p className='text-sm font-medium text-blue-100'>Valor actual: {value}</p>
-    </div>
+    </HeaderLayout>
   );
 };

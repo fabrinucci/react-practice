@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { HeaderLayout } from '../../../layouts/HeaderLayout';
 
 type User = {
   name: string;
@@ -6,7 +7,11 @@ type User = {
 };
 
 export const CancelRequest = () => {
-  return <CancelApi userId={4} />;
+  return (
+    <HeaderLayout title='Cancelar Request' path='intermediate'>
+      <CancelApi userId={4} />
+    </HeaderLayout>
+  );
 };
 
 export const CancelApi = ({ userId }: { userId: number }) => {
@@ -20,12 +25,9 @@ export const CancelApi = ({ userId }: { userId: number }) => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${userId}`,
-          {
-            signal: abortController.signal, // Pasar la señal al fetch
-          }
-        );
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+          signal: abortController.signal, // Pasar la señal al fetch
+        });
         const data = await response.json();
         setUser(data);
         setLoading(false);

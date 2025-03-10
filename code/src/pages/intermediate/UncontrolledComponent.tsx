@@ -1,4 +1,5 @@
 import { type FormEvent, useRef } from 'react';
+import { HeaderLayout } from '../../layouts';
 
 export const UncontrolledComponent = () => {
   const inputRef = useRef<HTMLInputElement>(null);
@@ -16,10 +17,7 @@ export const UncontrolledComponent = () => {
   };
 
   return (
-    <div className='max-w-sm mx-auto'>
-      <h1 className='font-bold text-2xl text-center text-blue-200 mb-6'>
-        Formulario No Controlado
-      </h1>
+    <HeaderLayout title='Formulario No Controlado' path='intermediate'>
       <form onSubmit={handleSubmit}>
         <div className='mb-5'>
           <label className='block mb-2 text-sm font-medium text-blue-100'>Ingresa el input</label>
@@ -37,6 +35,6 @@ export const UncontrolledComponent = () => {
           Enviar
         </button>
       </form>
-    </div>
+    </HeaderLayout>
   );
 };

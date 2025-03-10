@@ -19,6 +19,7 @@ import {
 import { UseTransition } from '../pages/advanced';
 import { UseMemo } from '../pages/intermediate/UseMemo';
 import { UseCallback } from '../pages/intermediate/UseCallback';
+import { SingleResposability } from '../pages/advanced/Solid/SingleResposability';
 
 export const MainRouter = () => {
   return (
@@ -45,6 +46,7 @@ export const MainRouter = () => {
       {/* Advanced */}
       <Route path='/advanced' component={AdvancedPage} />
       <Route path='/advanced/useTransition' component={UseTransition} />
+      <Route path='/advanced/single-responsability' component={SingleResposability} />
 
       {/* Not found */}
       <Route>404 - Page not found</Route>

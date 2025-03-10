@@ -1,4 +1,5 @@
 import { useEffect } from 'react';
+import { HeaderLayout } from '../../../layouts/HeaderLayout';
 
 export const EventSuscribe = () => {
   useEffect(() => {
@@ -13,5 +14,9 @@ export const EventSuscribe = () => {
     };
   }, []);
 
-  return <p>Abre la consola y redimensiona la ventana</p>;
+  return (
+    <HeaderLayout title='Suscripción a Evento' path='intermediate'>
+      <p>Abre la consola y redimensiona la ventana</p>
+    </HeaderLayout>
+  );
 };

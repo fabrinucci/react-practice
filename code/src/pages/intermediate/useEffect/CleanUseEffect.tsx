@@ -1,12 +1,15 @@
 import { useEffect, useState } from 'react';
+import { HeaderLayout } from '../../../layouts';
 
 export const CleanUseEffect = () => {
   return (
-    <div className='flex flex-col gap-3'>
-      <CleanTimer />
-      <CleanListener />
-      <CleanRequest userId={2} />
-    </div>
+    <HeaderLayout title='Limpiar useEffect' path='intermediate'>
+      <div className='flex flex-col gap-3'>
+        <CleanTimer />
+        <CleanListener />
+        <CleanRequest userId={2} />
+      </div>
+    </HeaderLayout>
   );
 };
 
@@ -71,12 +74,9 @@ const CleanRequest = ({ userId }: { userId: number }) => {
 
     const fetchData = async () => {
       try {
-        const response = await fetch(
-          `https://jsonplaceholder.typicode.com/users/${userId}`,
-          {
-            signal: abortController.signal, // Pasar la señal al fetch
-          }
-        );
+        const response = await fetch(`https://jsonplaceholder.typicode.com/users/${userId}`, {
+          signal: abortController.signal, // Pasar la señal al fetch
+        });
         const data = await response.json();
         setUser(data);
         setLoading(false);
