@@ -14,12 +14,18 @@ import {
   HOC,
   RenderProps,
   UncontrolledComponent,
+  UseCallback,
+  UseMemo,
 } from '../pages/intermediate';
 
 import { UseTransition } from '../pages/advanced';
-import { UseMemo } from '../pages/intermediate/UseMemo';
-import { UseCallback } from '../pages/intermediate/UseCallback';
-import { SingleResposability } from '../pages/advanced/Solid/SingleResposability';
+
+import {
+  InterfaceSegregation,
+  LiskovSubstitution,
+  OpenClosed,
+  SingleResposability,
+} from '../pages/advanced/solid';
 
 export const MainRouter = () => {
   return (
@@ -46,7 +52,10 @@ export const MainRouter = () => {
       {/* Advanced */}
       <Route path='/advanced' component={AdvancedPage} />
       <Route path='/advanced/useTransition' component={UseTransition} />
-      <Route path='/advanced/single-responsability' component={SingleResposability} />
+      <Route path='/advanced/1-single-responsability' component={SingleResposability} />
+      <Route path='/advanced/2-open-closed' component={OpenClosed} />
+      <Route path='/advanced/3-liskov-substitution' component={LiskovSubstitution} />
+      <Route path='/advanced/4-interface-segregation' component={InterfaceSegregation} />
 
       {/* Not found */}
       <Route>404 - Page not found</Route>

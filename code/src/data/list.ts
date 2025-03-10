@@ -11,4 +11,10 @@ export const IntermediateList = [
   'useCallback',
 ];
 
-export const AdvancedList = ['useTransition', 'single-responsability'];
+export const AdvancedList = [
+  'useTransition',
+  '1-single-responsability',
+  '2-open-closed',
+  '3-liskov-substitution',
+  '4-interface-segregation',
+];
