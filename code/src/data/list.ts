@@ -1,3 +1,5 @@
+export const BasicList = ['useId', 'compound-components-pattern'];
+
 export const IntermediateList = [
   'basic-useEffect',
   'event-suscribe',

@@ -2,6 +2,8 @@ import { Route, Switch } from 'wouter';
 import { AdvancedPage, Home, IntermediatePage } from '../pages';
 import { BasicPage } from '../pages';
 
+import { CompoundComponentsPattern, UseId } from '../pages/basic';
+
 import {
   BasicUseEffect,
   CancelRequest,
@@ -35,6 +37,8 @@ export const MainRouter = () => {
 
       {/* Basic */}
       <Route path='/basic' component={BasicPage} />
+      <Route path='/basic/useId' component={UseId} />
+      <Route path='/basic/compound-components-pattern' component={CompoundComponentsPattern} />
 
       {/* Intermediate */}
       <Route path='/intermediate' component={IntermediatePage} />

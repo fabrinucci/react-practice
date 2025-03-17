@@ -1,10 +1,26 @@
-import { useEffect } from 'react';
-import { HeaderLayout } from '../../../layouts/HeaderLayout';
+import { useEffect, useState } from 'react';
+import { HeaderLayout } from '../../../layouts';
 
 export const EventSuscribe = () => {
+  return (
+    <HeaderLayout title='Suscripción a eventos' path='intermediate'>
+      <WindowSize />
+    </HeaderLayout>
+  );
+};
+
+function WindowSize() {
+  const [size, setSize] = useState({
+    width: window.innerWidth,
+    height: window.innerHeight,
+  });
+
   useEffect(() => {
     const handleResize = () => {
-      console.log('La ventana se ha redimensionado');
+      setSize({
+        width: window.innerWidth,
+        height: window.innerHeight,
+      });
     };
 
     window.addEventListener('resize', handleResize);
@@ -15,8 +31,9 @@ export const EventSuscribe = () => {
   }, []);
 
   return (
-    <HeaderLayout title='Suscripción a Evento' path='intermediate'>
-      <p>Abre la consola y redimensiona la ventana</p>
-    </HeaderLayout>
+    <div>
+      <p>Ancho: {size.width}px</p>
+      <p>Alto: {size.height}px</p>
+    </div>
   );
-};
+}
